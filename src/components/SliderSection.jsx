@@ -1,18 +1,19 @@
 import React from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import image1 from "../utils/images/dubai.jpg";
 
 const SliderSection = () => {
   return (
-    <div className="bg-black text-white py-12 px-4 md:px-20">
+    <div className="bg-black text-white py-12 px-4 md:px-25">
       {/* Heading */}
       <div className="text-center md:text-left mb-8">
         <h2 className="text-2xl md:text-3xl font-semibold">
           Where Great Ideas Became Real Results
         </h2>
         <p className="text-gray-300 mt-2 max-w-2xl">
-          Offshore development services refers to the practice of hiring a remote
-          team or a software development company in a different country to help
-          reduce development costs
+          Offshore development services refers to the practice of hiring a
+          remote team or a software development company in a different country
+          to help reduce development costs
         </p>
       </div>
 
@@ -24,7 +25,7 @@ const SliderSection = () => {
         </button>
 
         {/* Card */}
-        <div className="bg-white text-black rounded-2xl p-6 flex flex-col md:flex-row items-center md:items-start gap-6 w-full max-w-5xl">
+        <div className="bg-white text-black rounded-2xl p-6 flex flex-col md:flex-row items-center md:items-start gap-6 w-full ">
           {/* Left Text */}
           <div className="flex-1">
             <h3 className="text-lg md:text-xl font-semibold mb-2">
@@ -40,7 +41,7 @@ const SliderSection = () => {
           {/* Right Image */}
           <div className="flex-1">
             <img
-              src="https://images.unsplash.com/photo-1506976785307-8732e854ad04?auto=format&fit=crop&w=800&q=80"
+              src={image1}
               alt="Dubai skyline"
               className="w-full h-64 object-cover rounded-2xl"
             />

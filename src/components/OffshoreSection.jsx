@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import awsLogo from "./utils/images/offshore.png";
-import girlLaptop from "./utils/images/offshore.png";
+import awsLogo from "../utils/images/offshore.png";
+import girlLaptop from "../utils/images/offshore.png";
 
 const OffshoreSection = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import headerImage from "./utils/images/headerImage.jpg";
-import logo from "./utils/images/logo.png";
-import { DownArrow } from "./utils/icons/icons";
+import headerImage from "../utils/images/headerImage.jpg";
+import logo from "../utils/images/logo.png";
+import { DownArrow } from "../utils/icons/icons"; 
 
 const HeroSection = () => {
   const [menuOpen, setMenuOpen] = useState(false);

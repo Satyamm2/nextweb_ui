@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
+import { SlArrowDown } from "react-icons/sl";
+import { SlArrowRight } from "react-icons/sl";
 
 const OffshoreSection3 = () => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -21,24 +23,27 @@ const OffshoreSection3 = () => {
           </p>
           <ul className="mt-4 space-y-2 text-sm text-gray-300">
             <li className="flex items-center gap-2">
-              <FaCheck className="text-blue-500" /> Enhanced business process quality
+              <FaCheck className="text-blue-500" /> Enhanced business process
+              quality
             </li>
             <li className="flex items-center gap-2">
-              <FaCheck className="text-blue-500" /> Flexible and scalable technological solutions
+              <FaCheck className="text-blue-500" /> Flexible and scalable
+              technological solutions
             </li>
             <li className="flex items-center gap-2">
-              <FaCheck className="text-blue-500" /> Technically proficient team of offshore developers
+              <FaCheck className="text-blue-500" /> Technically proficient team
+              of offshore developers
             </li>
             <li className="flex items-center gap-2">
-              <FaCheck className="text-blue-500" /> On-time project delivery with high-security standards
+              <FaCheck className="text-blue-500" /> On-time project delivery
+              with high-security standards
             </li>
           </ul>
         </>
       ),
     },
     {
-      title:
-        "Workflow post offshore software development team establishment",
+      title: "Workflow post offshore software development team establishment",
       content: (
         <p className="text-gray-300 text-sm leading-relaxed">
           Hire a dedicated offshore software development team with Nextwebi and
@@ -70,7 +75,7 @@ const OffshoreSection3 = () => {
           Nextwebi is a leading offshore software development company we save
           you from hiring hassle and deploy a team of dedicated
         </p>
-        <div className="bg-gray-900 rounded-xl p-6 mt-8 flex flex-col gap-4 max-w-xs">
+        <div className="bg-[#1b1b1b] rounded-xl p-6 mt-8 flex flex-col gap-4 max-w-xs">
           <p className="text-white font-medium">
             Let's begin with a no-obligation conversations.
           </p>
@@ -85,18 +90,16 @@ const OffshoreSection3 = () => {
         {accordionData.map((item, index) => (
           <div
             key={index}
-            className="bg-gray-900 rounded-xl p-6 cursor-pointer"
-            onClick={() =>
-              setOpenIndex(openIndex === index ? null : index)
-            }
+            className="bg-[#1b1b1b] rounded-xl p-6 cursor-pointer"
+            onClick={() => setOpenIndex(openIndex === index ? null : index)}
           >
             <div className="flex justify-between items-center">
               <h3 className="font-semibold">{item.title}</h3>
-              <span>{openIndex === index ? "▼" : "▶"}</span>
+              <span>
+                {openIndex === index ? <SlArrowDown /> : <SlArrowRight />}
+              </span>
             </div>
-            {openIndex === index && (
-              <div className="mt-4">{item.content}</div>
-            )}
+            {openIndex === index && <div className="mt-4">{item.content}</div>}
           </div>
         ))}
       </div>
