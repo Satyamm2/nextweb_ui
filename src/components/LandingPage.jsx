@@ -14,6 +14,7 @@ import ContactSection from "./ContactSection";
 export default function LandingPage() {
   return (
     <>
+    <div className="overflow-hidden">
       <Home />
       <OffshoreSection />
       <OffshoreSection2 />
@@ -26,6 +27,7 @@ export default function LandingPage() {
       <TechnologiesSection />
       <RelatedBlogs />
       <ContactSection />
+      </div>
     </>
   );
 }

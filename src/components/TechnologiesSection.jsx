@@ -1,65 +1,98 @@
 import React from "react";
-import { FaHtml5, FaCss3Alt, FaVuejs, FaAngular, FaReact } from "react-icons/fa";
-import { SiJavascript } from "react-icons/si";
+import htmlLogo from "../utils/logos/htmlLogo.png";
+import cssLogo from "../utils/logos/cssLogo.png";
+import javascriptLogo from '../utils/logos/javascriptLogo.png'
+import vueLogo from '../utils/logos/vueLogo.png'
+import reactLogo from '../utils/logos/reactLogo.png';
+import angularLogo from '../utils/logos/angularLogo.png';
+import { motion } from "framer-motion";
 
 const TechnologiesSection = () => {
   return (
-    <div className="bg-black text-white py-16 px-6 md:px-20">
+    <div className="bg-[#121212] text-white py-16 px-6 md:px-30">
+
       {/* Heading */}
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">
-        Absolutely, We Have Thoroughly Mastered The Technologies You Prefer.
-      </h2>
-      <p className="text-gray-300 mb-10 max-w-3xl">
-        Our exceptionally skilled IT specialists are proficient in both classic
-        and modern programming languages, as well as frameworks. We aim for
-        excellence, choosing only the top-tier candidates when selecting our IT
-        specialists.
-      </p>
+      <div className="text-[42px] font-semiold mb-2">
+        <h2>
+          Absolutely, We Have Thoroughly Mastered The Technologies
+        </h2>
+        <h2>
+          You Prefer.
+        </h2>
+      </div>
+      <div className="text-[20px] mb-10">
+        <p>Our exceptionally skilled IT specialists are proficient in both classic
+          and modern programming languages, as well as frameworks.</p>
+        <p> We aim for
+          excellence, choosing only the top-tier candidates when selecting our IT
+          specialists.</p>
+
+      </div>
 
       {/* Content */}
-      <div className="grid md:grid-cols-2 gap-8">
-        {/* Left Side */}
-        <div className="space-y-6">
-          {["Frontend Programming Languages", "Backend Programming Languages", "Mobile", "Big Data"].map((item, idx) => (
-            <div
-              key={idx}
-              className={`py-4 px-6 bg-gray-900 rounded-md font-semibold ${
-                idx === 0 ? "border border-gray-700" : ""
-              }`}
-            >
-              {item}
-            </div>
-          ))}
-        </div>
+      <div className="grid md:grid-cols-2 gap-6">
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ amount: 0.2 }}
+        >
+          {/* Left Side */}
+          <div className="space-y-6">
+            {["Frontend Programming Languages", "Backend Programming Languages", "Mobile", "Big Data"].map((item, idx) => (
+              <div key={idx} className="relative max-w-lg">
+                <div
+                  className="px-12 py-8 hover:bg-[#1B1B1B] cursor-pointer font-bold rounded-xl text-[22px] relative"
+                >
+                  {item}
 
-        {/* Right Side */}
-        <div className="grid grid-cols-2 gap-6">
-          <div className="flex items-center gap-3 bg-gray-900 p-4 rounded-md">
-            <FaHtml5 className="text-orange-500 text-2xl" />
-            <span>HTML5</span>
+                  {/* Conditionally render the fading border line inside the box */}
+                  {(item === "Frontend Programming Languages" ||
+                    item === "Backend Programming Languages" ||
+                    item === "Mobile") && (
+                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 h-[1px] bg-white/20 pointer-events-none">
+                        {/* Fading overlays */}
+                        <div className="absolute left-0 top-0 h-full w-6 bg-gradient-to-r from-[#0F0F0F] to-transparent"></div>
+                        <div className="absolute right-0 top-0 h-full w-6 bg-gradient-to-l from-[#0F0F0F] to-transparent"></div>
+                      </div>
+                    )}
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="flex items-center gap-3 bg-gray-900 p-4 rounded-md">
-            <FaCss3Alt className="text-blue-500 text-2xl" />
-            <span>CSS3</span>
+
+        </motion.div>
+
+
+
+
+        <motion.div
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ amount: 0.2 }}
+        >
+          {/* Right Side */}
+          <div>
+            <div className="grid grid-cols-2 gap-4">
+              {[ // simplified list for maintainability
+                { src: htmlLogo, label: "HTML5" },
+                { src: cssLogo, label: "CSS3" },
+                { src: vueLogo, label: "Vue" },
+                { src: angularLogo, label: "Angular" },
+                { src: javascriptLogo, label: "JavaScript" },
+                { src: reactLogo, label: "React" },
+              ].map(({ src, label }, idx) => (
+                <div key={idx} className="flex items-center justify-center gap-4 bg-[#1B1B1B] py-6 rounded-lg">
+                  <img src={src} alt={`${label} logo`} />
+                  <span className="text-[18px]">{label}</span>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="flex items-center gap-3 bg-gray-900 p-4 rounded-md">
-            <FaVuejs className="text-green-500 text-2xl" />
-            <span>Vue</span>
-          </div>
-          <div className="flex items-center gap-3 bg-gray-900 p-4 rounded-md">
-            <FaAngular className="text-red-500 text-2xl" />
-            <span>Angular</span>
-          </div>
-          <div className="flex items-center gap-3 bg-gray-900 p-4 rounded-md">
-            <SiJavascript className="text-yellow-400 text-2xl" />
-            <span>JavaScript</span>
-          </div>
-          <div className="flex items-center gap-3 bg-gray-900 p-4 rounded-md">
-            <FaReact className="text-cyan-400 text-2xl" />
-            <span>React</span>
-          </div>
-        </div>
+        </motion.div>
       </div>
+
     </div>
   );
 };

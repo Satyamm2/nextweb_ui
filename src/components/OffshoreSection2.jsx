@@ -1,4 +1,6 @@
 import React from "react";
+import bgpng1 from '../utils/images/bgpng1.png';
+import bgpng2 from '../utils/images/bgpng2.png';
 
 const services = [
   {
@@ -17,32 +19,104 @@ const services = [
 
 const Card = ({ title, desc }) => {
   return (
-    <div className="relative p-6 bg-[#1c1c1c] text-white rounded-lg overflow-hidden group">
-      {/* Border Animation */}
-      <span className="absolute inset-0 border-2 border-transparent rounded-lg before:absolute before:inset-0 before:border-2 before:border-white before:rounded-lg before:animate-none before:content-[''] before:opacity-0 group-hover:opacity-100 group-hover:animate-border-spin"></span>
-      
-      <h3 className="text-lg font-semibold mb-3">{title}</h3>
-      <p className="text-sm leading-relaxed">{desc}</p>
+    <div className="relative group px-4 sm:px-6 py-8 bg-[#1c1c1c] text-white rounded-xl overflow-visible cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
+      {/* Outer SVG border */}
+      <svg
+        className="absolute -inset-[4px] w-[calc(100%+8px)] h-[calc(100%+8px)] pointer-events-none overflow-visible"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+      >
+        {/* Gradient Definition */}
+        <defs>
+          <linearGradient id="grad" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stopColor="#555" />
+            <stop offset="50%" stopColor="white" />
+            <stop offset="100%" stopColor="#555" />
+          </linearGradient>
+        </defs>
+
+        <rect
+          className="snake-line opacity-0"
+          x="0"
+          y="0"
+          width="100"
+          height="100"
+          rx="10"
+          ry="10"
+          fill="none"
+          stroke="url(#grad)"
+          strokeWidth="1.2"
+          strokeLinecap="round"
+          strokeDasharray="24 376"
+        />
+      </svg>
+
+      {/* Content */}
+      <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-6 relative z-10">{title}</h3>
+      <p className="leading-relaxed relative z-10 text-sm sm:text-base">{desc}</p>
+
+      {/* CSS */}
+      <style>{`
+        @keyframes snake {
+          to { stroke-dashoffset: -400; }
+        }
+        .group:hover .snake-line {
+          opacity: 1;
+          animation: snake 6s linear infinite;
+        }
+      `}</style>
     </div>
   );
 };
 
 const OffshoreSection2 = () => {
   return (
-    <div className="bg-black min-h-screen text-white py-16 px-8">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold mb-4">Output-Driven Offshore Software Development Centre</h1>
-        <p className="text-gray-300 mb-10 max-w-3xl">
-          Offshore development services refers to the practice of hiring a remote team or a software development company in a different company to help reduce development costs
-        </p>
+    <div className="bg-black min-h-screen text-white py-10 sm:py-14 md:py-16 px-6 sm:px-12 md:px-24 lg:px-36 relative overflow-hidden">
+      {/* Top right background image */}
+      <img
+        src={bgpng1}
+        alt="Background top right"
+        className="absolute top-0 right-0 object-contain pointer-events-none select-none"
+        style={{
+          opacity: 0.5,
+          width: 'auto',
+          height: '70px',
+          // Responsive heights for bigger screens:
+          // Tailwind can’t directly style inline style media queries, so we do here for example:
+        }}
+      />
+      {/* Bottom left background image */}
+      <img
+        src={bgpng2}
+        alt="Background bottom left"
+        className="absolute bottom-0 left-0 object-contain pointer-events-none select-none"
+        style={{
+          opacity: 0.5,
+          width: 'auto',
+          height: '140px',
+        }}
+      />
+
+      <div className="mx-auto relative z-10 max-w-7xl">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-2 leading-tight sm:leading-snug">
+          Output-Driven Offshore Software
+        </h1>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-6 leading-tight sm:leading-snug">
+          Development Centre
+        </h1>
+
+        <div className="text-base sm:text-lg md:text-xl mb-10 sm:mb-12 md:mb-14 max-w-3xl leading-relaxed">
+          <p>Offshore development services refers to the practice of hiring a remote team or a software development</p>
+          <p> company in a different company to help reduce development costs</p>
+        </div>
 
         {/* 2 Rows of Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-6">
           {services.map((s, i) => (
             <Card key={i} {...s} />
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {services.map((s, i) => (
             <Card key={i} {...s} />
           ))}
