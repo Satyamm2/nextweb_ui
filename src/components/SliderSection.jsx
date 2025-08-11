@@ -128,16 +128,13 @@ const SliderSection = () => {
                     <clipPath id="convex-notch" clipPathUnits="objectBoundingBox">
                       <path
                         d="
-                          M0.15,0
-                          Q0.00,0.15 0.00,0.30
-                          L0.00,0.95
-                          Q0.00,1.00 0.05,1.00
-                          L0.95,1.00
-                          Q1.00,1.00 1.00,0.95
-                          L1.00,0.05
-                          Q1.00,0.00 0.95,0.00
-                          L0.15,0.00
-                          Z"
+      M0.20,0
+      Q0.08,0.08 0,0.20
+      L0,1
+      L1,1
+      L1,0
+      Z
+    "
                       />
                     </clipPath>
                   </defs>
