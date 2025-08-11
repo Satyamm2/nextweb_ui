@@ -1,6 +1,7 @@
 import React from "react";
 import bgpng1 from '../utils/images/bgpng1.png';
 import bgpng2 from '../utils/images/bgpng2.png';
+import "./card.css"
 
 const services = [
   {
@@ -21,6 +22,7 @@ const Card = ({ title, desc }) => {
   return (
     <div className="relative group px-4 sm:px-6 py-8 bg-[#1c1c1c] text-white rounded-xl overflow-visible cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
       {/* Outer SVG border */}
+
       <svg
         className="absolute -inset-[4px] w-[calc(100%+8px)] h-[calc(100%+8px)] pointer-events-none overflow-visible"
         viewBox="0 0 100 100"
@@ -45,9 +47,9 @@ const Card = ({ title, desc }) => {
           ry="10"
           fill="none"
           stroke="url(#grad)"
-          strokeWidth="1.2"
+          strokeWidth="1"
           strokeLinecap="round"
-          strokeDasharray="24 376"
+          strokeDasharray="60 376"
         />
       </svg>
 

@@ -4,7 +4,9 @@ import { FiArrowRight } from "react-icons/fi";
 import { SlArrowDown } from "react-icons/sl";
 import { SlArrowRight } from "react-icons/sl";
 import paperplane from '../utils/images/paperplane.png';
+import downarrow from '../utils/images/downarrow.png';
 import { motion } from "framer-motion";
+import { FiArrowDownRight } from "react-icons/fi";
 
 const OffshoreSection3 = () => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -67,7 +69,7 @@ const OffshoreSection3 = () => {
   ];
 
   return (
-    <div className="bg-black text-white py-16 px-6 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div className="bg-black text-white py-16 px-6 md:px-30 grid grid-cols-1 md:grid-cols-2 gap-">
       {/* Left Section */}
       <motion.div
         initial={{ x: -100, opacity: 0 }}
@@ -86,19 +88,23 @@ const OffshoreSection3 = () => {
             Project Requirements
           </h2>
         </div>
-        <p className="mt-8 text-[20px]">
+        <p className="mt-8 text-[20px] max-w-lg">
           Nextwebi is a leading offshore software development company we save
           you from hiring hassle and deploy a team of dedicated
         </p>
-        <div className="bg-[#1b1b1b] rounded-xl px-6 py-8 space-y-4 mt-12 flex flex-col gap-4 max-w-[387px]">
+        <div className="bg-[#1b1b1b] relative rounded-xl px-8 pt-8 pb-5 space-y-4 mt-12 flex flex-col gap-4 max-w-[420px]">
           <img src={paperplane} alt="paperplane logo" className="h-12 w-12" />
-          <p className="text-[20px] font-semibold">
-            Let's begin with a no-obligation conversations.
+          <p className="text-[25px] font-semibold">
+            Let's begin with a no-obligation conversation.
           </p>
-          <button className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-[16px] px-5 py-3 rounded-xl font-semibold flex items-center gap-2 w-fit">
+          <button className="bg-blue-600 cursor-pointer hover:bg-blue-700 text-[18px] px-5 py-3 rounded-xl font-semibold flex items-center gap-2 w-fit">
             Request a Quote
           </button>
+
+          {/* Position this icon absolutely at the bottom right */}
+          <FiArrowDownRight className="text-[#313131] absolute bottom-1 right-1" size={80} />
         </div>
+
       </motion.div>
 
       {/* Right Section - Accordions */}

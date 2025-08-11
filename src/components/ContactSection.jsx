@@ -93,7 +93,7 @@ const ContactSection = () => {
               </div>
 
 
-              <div className="flex items-center gap-2">
+              <div className="md:flex xs:flex-col items-center gap-2">
                 <span className="font-bold">5 + 3</span>
                 <input type="number" className="w-16 p-1 border-white rounded bg-[#2A2A2A] border border-gray-600 focus:outline-none" />
               </div>
