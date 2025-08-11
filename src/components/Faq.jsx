@@ -32,7 +32,7 @@ const faqs = [
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState(0); // first one open by default
+  const [openIndex, setOpenIndex] = useState(null); // first one open by default
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
