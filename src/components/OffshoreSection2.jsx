@@ -80,7 +80,7 @@ const OffshoreSection2 = () => {
         style={{
           opacity: 0.5,
           width: 'auto',
-          height: '70px',
+          height: '500px',
           // Responsive heights for bigger screens:
           // Tailwind can’t directly style inline style media queries, so we do here for example:
         }}
@@ -93,7 +93,7 @@ const OffshoreSection2 = () => {
         style={{
           opacity: 0.5,
           width: 'auto',
-          height: '140px',
+          height: '700px',
         }}
       />
 
