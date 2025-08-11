@@ -62,7 +62,7 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-neutral-900 rounded-xl overflow-hidden"
+              className="bg-neutral-900 rounded-xl overflow-hidden hover:scale-105"
             >
               <button
                 onClick={() => toggleAccordion(index)}

@@ -1,7 +1,6 @@
 import React from "react";
 import bgpng1 from '../utils/images/bgpng1.png';
 import bgpng2 from '../utils/images/bgpng2.png';
-import "./card.css"
 
 const services = [
   {
