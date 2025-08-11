@@ -167,8 +167,8 @@ const SliderSection = () => {
           {slides.map((_, index) => (
             <span
               key={index}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                index === currentIndex ? "bg-blue-500 w-6" : "bg-white w-3"
+              className={`px-3 py-1 rounded-full transition-all duration-300 ${
+                index === currentIndex ? "bg-blue-500 px-6" : "bg-white"
               }`}
             ></span>
           ))}
