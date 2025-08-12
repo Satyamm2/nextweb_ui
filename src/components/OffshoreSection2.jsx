@@ -1,6 +1,7 @@
 import React from "react";
 import bgpng1 from '../utils/images/bgpng1.png';
 import bgpng2 from '../utils/images/bgpng2.png';
+import "./box.css";
 
 const services = [
   {
@@ -19,53 +20,12 @@ const services = [
 
 const Card = ({ title, desc }) => {
   return (
-    <div className="relative group px-4 sm:px-6 py-8 bg-[#1c1c1c] text-white rounded-xl overflow-visible cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105">
-      {/* Outer SVG border */}
-
-      <svg
-        className="absolute -inset-[4px] w-[calc(100%+8px)] h-[calc(100%+8px)] pointer-events-none overflow-visible"
-        viewBox="0 0 100 100"
-        preserveAspectRatio="none"
-      >
-        {/* Gradient Definition */}
-        <defs>
-          <linearGradient id="grad" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#555" />
-            <stop offset="50%" stopColor="white" />
-            <stop offset="100%" stopColor="#555" />
-          </linearGradient>
-        </defs>
-
-        <rect
-          className="snake-line opacity-0"
-          x="0"
-          y="0"
-          width="100"
-          height="100"
-          rx="10"
-          ry="10"
-          fill="none"
-          stroke="url(#grad)"
-          strokeWidth="1"
-          strokeLinecap="round"
-          strokeDasharray="60 376"
-        />
-      </svg>
+    <div className="box group px-4 sm:px-6 py-8 text-white rounded-xl  cursor-pointer">
 
       {/* Content */}
-      <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-6 relative z-10">{title}</h3>
-      <p className="leading-relaxed relative z-10 text-sm sm:text-base">{desc}</p>
+      <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-6 z-10">{title}</h3>
+      <p className="leading-relaxed z-10 text-sm sm:text-base">{desc}</p>
 
-      {/* CSS */}
-      <style>{`
-        @keyframes snake {
-          to { stroke-dashoffset: -400; }
-        }
-        .group:hover .snake-line {
-          opacity: 1;
-          animation: snake 6s linear infinite;
-        }
-      `}</style>
     </div>
   );
 };

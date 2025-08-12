@@ -103,11 +103,10 @@ const SliderSection = () => {
                 {slides[currentIndex].title.map((line, index) => (
                   <h3
                     key={index}
-                    className={`text-[22px] sm:text-[26px] md:text-[30px] lg:text-[32px] font-bold leading-tight ${
-                      index === slides[currentIndex].title.length - 1
+                    className={`text-[22px] sm:text-[26px] md:text-[30px] lg:text-[32px] font-bold leading-tight ${index === slides[currentIndex].title.length - 1
                         ? "mb-4 sm:mb-6"
                         : ""
-                    }`}
+                      }`}
                   >
                     {line}
                   </h3>
@@ -137,6 +136,7 @@ const SliderSection = () => {
     "
                       />
                     </clipPath>
+
                   </defs>
                   <image
                     href={slides[currentIndex].image}
@@ -160,13 +160,12 @@ const SliderSection = () => {
         </div>
 
         {/* Dots */}
-        <div className="flex justify-center mt-4 sm:mt-6 space-x-1 sm:space-x-2">
+        <div className="flex justify-center mt-4 sm:mt-6 space-x-3 sm:space-x-2">
           {slides.map((_, index) => (
             <span
               key={index}
-              className={`px-3 py-1 rounded-full transition-all duration-300 ${
-                index === currentIndex ? "bg-blue-500 px-6" : "bg-white"
-              }`}
+              className={`px-3 py-1 rounded-full transition-all duration-300 ${index === currentIndex ? "bg-blue-500 px-6" : "bg-white"
+                }`}
             ></span>
           ))}
         </div>
