@@ -129,10 +129,10 @@ const HeroSection = () => {
                 {slide.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-6">
-                <button className="bg-[#1468FB] hover:bg-blue-400 text-white px-4 sm:px-6 py-2 rounded-xl text-sm sm:text-base">
+                <button className="bg-[#1468FB] cursor-pointer hover:bg-blue-400 text-white px-4 sm:px-6 py-2 rounded-xl text-sm sm:text-base">
                   Get in Touch
                 </button>
-                <button className="bg-transparent hover:bg-gray-800 text-white px-4 sm:px-6 py-2 border border-white rounded-xl text-sm sm:text-base">
+                <button className="bg-transparent cursor-pointer hover:bg-gray-800 text-white px-4 sm:px-6 py-2 border border-white rounded-xl text-sm sm:text-base">
                   Our Works
                 </button>
               </div>
