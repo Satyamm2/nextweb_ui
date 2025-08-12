@@ -89,7 +89,7 @@ const SliderSection = () => {
         <div className="relative flex flex-col lg:flex-row items-center justify-center px-4 sm:px-8 md:px-10">
           {/* Left Arrow */}
           <button
-            className="absolute top-1/2 -translate-y-1/2 left-2 sm:left-4 md:-left-12 z-20 bg-[#1468FB] hover:bg-white hover:text-black text-white p-3 sm:p-4 md:p-5 rounded-full shadow-md"
+            className="absolute top-1/2 cursor-pointer -translate-y-1/2 left-2 sm:left-4 md:-left-12 z-20 bg-[#1468FB] hover:bg-white hover:text-black text-white p-3 sm:p-4 md:p-5 rounded-full shadow-md"
             onClick={handlePrev}
           >
             <FaChevronLeft />
@@ -152,7 +152,7 @@ const SliderSection = () => {
 
           {/* Right Arrow */}
           <button
-            className="absolute top-1/2 -translate-y-1/2 right-2 sm:right-4 md:-right-12 z-20 bg-[#1468FB] hover:bg-white hover:text-black text-white p-3 sm:p-4 md:p-5 rounded-full shadow-md"
+            className="absolute top-1/2 cursor-pointer -translate-y-1/2 right-2 sm:right-4 md:-right-12 z-20 bg-[#1468FB] hover:bg-white hover:text-black text-white p-3 sm:p-4 md:p-5 rounded-full shadow-md"
             onClick={handleNext}
           >
             <FaChevronRight />
