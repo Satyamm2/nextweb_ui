@@ -42,8 +42,6 @@ const OffshoreSection2 = () => {
           opacity: 0.5,
           width: 'auto',
           height: '500px',
-          // Responsive heights for bigger screens:
-          // Tailwind can’t directly style inline style media queries, so we do here for example:
         }}
       />
       {/* Bottom left background image */}

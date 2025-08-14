@@ -91,7 +91,7 @@ const HeroSection = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsTransitioning(false);
-    }, 1000); // Match this with your CSS transition duration
+    }, 1000); 
 
     return () => clearTimeout(timer);
   }, [currentSlide]);

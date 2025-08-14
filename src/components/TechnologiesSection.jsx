@@ -20,18 +20,18 @@ const technologies = {
   "Backend Programming Languages": [
     { src: javascriptLogo, label: "Node.js" },
     { src: reactLogo, label: "Express" },
-    { src: htmlLogo, label: "Python" }, // Replace with actual logo
-    { src: cssLogo, label: "Django" },  // Replace with actual logo
+    { src: htmlLogo, label: "Python" },
+    { src: cssLogo, label: "Django" }, 
   ],
   "Mobile": [
     { src: reactLogo, label: "React Native" },
     { src: javascriptLogo, label: "Flutter" },
-    { src: cssLogo, label: "Swift" }, // Replace with actual logo
+    { src: cssLogo, label: "Swift" }, 
   ],
   "Big Data": [
     { src: javascriptLogo, label: "Hadoop" },
     { src: htmlLogo, label: "Spark" },
-    { src: reactLogo, label: "Kafka" }, // Replace with actual logo
+    { src: reactLogo, label: "Kafka" }, 
   ],
 };
 

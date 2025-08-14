@@ -30,8 +30,8 @@ const RelatedBlogs = () => {
   return (
     <div className="bg-[#1A1A1A] text-white pt-15 ">
 <motion.div
-  initial={{ y: 100, opacity: 0 }}   // Start above (y: -100)
-  whileInView={{ y: 0, opacity: 1 }}  // Animate down to original position
+  initial={{ y: 100, opacity: 0 }}   
+  whileInView={{ y: 0, opacity: 1 }}  
   transition={{ duration: 0.8 }}
   viewport={{ amount: 0.2 }}
 >
