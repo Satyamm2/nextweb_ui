@@ -117,7 +117,7 @@ const SliderSection = () => {
               </div>
 
               {/* Right Image with convex notch */}
-              <div className="flex-[1.2] relative min-h-[220px] sm:min-h-[320px] md:min-h-[420px] lg:min-h-[500px]">
+              <div className="flex-[1.2] rounded-2xl relative min-h-[220px] sm:min-h-[320px] md:min-h-[420px] lg:min-h-[500px]">
                 <svg
                   viewBox="0 0 800 600"
                   preserveAspectRatio="xMidYMid slice"
