@@ -102,7 +102,7 @@ export default function TestimonialSlider() {
                 <RiDoubleQuotesL className="text-[#1468FB]" size={32} md:size={40} />
               </div>
 
-              <p className="text-base md:text-xl mb-5 md:mb-6 p-3 text-center md:text-left leading-relaxed">
+              <p className="text-base md:text-xl mb-5 md:mb-6 p-3 text-center leading-relaxed">
                 {testimonials[current].text}
               </p>
 
